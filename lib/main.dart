@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:to_do_getx_tut/app/data/services/storage/services.dart';
+import 'package:to_do_getx_tut/app/module/home/binding.dart';
 import 'package:to_do_getx_tut/app/module/home/home_screen_view.dart';
 
 void main() async{
@@ -31,6 +33,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const HomeScreenView() ,
+      initialBinding: HomeBindings(),
+      builder: EasyLoading.init(),
     );
   }
 }
